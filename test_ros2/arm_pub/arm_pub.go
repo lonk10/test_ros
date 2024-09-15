@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	mavros "test/msgs/mavros_msgs/srv"
+	std_msgs "test/msgs/std_msgs/msg"
 
 	"github.com/tiiuae/rclgo/pkg/rclgo"
 )
@@ -30,14 +30,14 @@ func run() error {
 	}
 	defer node.Close()
 
-	pub, err := mavros.NewCommandBool_RequestPublisher(node, "/abu/start", nil)
+	pub, err := std_msgs.NewBoolPublisher(node, "/abu/start", nil)
 	if err != nil {
 		return fmt.Errorf("failed to create publisher: %v", err)
 	}
 	defer pub.Close()
 
-	msg := mavros.CommandBool_Request{
-		Value: true, // Set to "ARMED"
+	msg := std_msgs.Bool{
+		Data: true, // Set to "ARMED"
 	}
 
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)

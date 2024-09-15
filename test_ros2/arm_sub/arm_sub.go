@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	mavros "test/msgs/mavros_msgs/srv"
+	std_msgs "test/msgs/std_msgs/msg"
 
 	arm "test/test_ros2/arm_copter"
 
@@ -31,17 +31,17 @@ func run() error {
 	}
 	defer node.Close()
 
-	sub, err := mavros.NewCommandBool_RequestSubscription(
+	sub, err := std_msgs.NewBoolSubscription(
 		node,
 		"/abu/start",
 		nil,
-		func(msg *mavros.CommandBool_Request, info *rclgo.MessageInfo, err error) {
+		func(msg *std_msgs.Bool, info *rclgo.MessageInfo, err error) {
 			if err != nil {
 				node.Logger().Errorf("failed to receive message: %v", err)
 				return
 			}
 			node.Logger().Infof("Received: %#v", msg)
-			if msg.Value {
+			if msg.Data {
 				node.Logger().Infof("Starting copter...")
 				err = arm.StartDrone("GUIDED", 10, 600)
 				if err != nil {
