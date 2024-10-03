@@ -25,7 +25,7 @@ func run() error {
 	}
 	defer rclgo.Uninit()
 
-	node, err := rclgo.NewNode("publisher", "")
+	node, err := rclgo.NewNode("arm_sub_client", "")
 	if err != nil {
 		return fmt.Errorf("failed to create node: %v", err)
 	}
