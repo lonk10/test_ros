@@ -1,0 +1,103 @@
+[0.235s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'aburos_msgs']
+[0.235s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['aburos_msgs'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fe142980340>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fe14294feb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fe14294feb0>>)
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.300s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lonk/abu-new/test/test_abu/aburos_msgs'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.321s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'aburos_msgs'
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.354s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 277 installed packages in /opt/ros/humble
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_args' from command line to 'None'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_target' from command line to 'None'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.429s] Level 5:colcon.colcon_core.verb:set package 'aburos_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.429s] DEBUG:colcon.colcon_core.verb:Building package 'aburos_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs', 'merge_install': False, 'path': '/home/lonk/abu-new/test/test_abu/aburos_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.429s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.430s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.430s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lonk/abu-new/test/test_abu/aburos_msgs' with build type 'ament_cmake'
+[0.431s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lonk/abu-new/test/test_abu/aburos_msgs'
+[0.436s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.436s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.436s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lonk/abu-new/test/test_abu/aburos_msgs -DCMAKE_INSTALL_PREFIX=/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs
+[3.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/lonk/abu-new/test/test_abu/aburos_msgs -DCMAKE_INSTALL_PREFIX=/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs
+[3.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs -- -j8 -l8
+[5.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs -- -j8 -l8
+[5.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs
+[5.669s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aburos_msgs)
+[5.670s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs
+[5.676s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs' for CMake module files
+[5.676s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs' for CMake config files
+[5.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('aburos_msgs', 'cmake_prefix_path')
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.ps1'
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.dsv'
+[5.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.sh'
+[5.679s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib'
+[5.679s] Level 1:colcon.colcon_core.shell:create_environment_hook('aburos_msgs', 'ld_library_path_lib')
+[5.679s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.ps1'
+[5.680s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.dsv'
+[5.680s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.sh'
+[5.680s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/bin'
+[5.680s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/pkgconfig/aburos_msgs.pc'
+[5.681s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/python3.10/site-packages'
+[5.681s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/bin'
+[5.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.ps1'
+[5.682s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.dsv'
+[5.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.sh'
+[5.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.bash'
+[5.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.zsh'
+[5.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/colcon-core/packages/aburos_msgs)
+[5.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aburos_msgs)
+[5.740s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs' for CMake module files
+[5.741s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs' for CMake config files
+[5.742s] Level 1:colcon.colcon_core.shell:create_environment_hook('aburos_msgs', 'cmake_prefix_path')
+[5.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.ps1'
+[5.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.dsv'
+[5.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/cmake_prefix_path.sh'
+[5.743s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib'
+[5.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('aburos_msgs', 'ld_library_path_lib')
+[5.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.ps1'
+[5.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.dsv'
+[5.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/hook/ld_library_path_lib.sh'
+[5.744s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/bin'
+[5.744s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/pkgconfig/aburos_msgs.pc'
+[5.744s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/python3.10/site-packages'
+[5.744s] Level 1:colcon.colcon_core.environment:checking '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/bin'
+[5.745s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.ps1'
+[5.745s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.dsv'
+[5.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.sh'
+[5.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.bash'
+[5.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.zsh'
+[5.746s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/colcon-core/packages/aburos_msgs)
+[5.747s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.748s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.748s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.748s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.793s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.793s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.793s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.793s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'

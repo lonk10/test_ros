@@ -1,0 +1,7 @@
+{
+  "package_name": "aburos_msgs",
+  "non_idl_tuples": [
+    "/home/lonk/abu-new/test/test_abu/aburos_msgs:msg/AbuRule.msg",
+    "/home/lonk/abu-new/test/test_abu/aburos_msgs:msg/AbuBytes.msg"
+  ]
+}

@@ -1,0 +1,268 @@
+[0.014s] Invoking command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs -- -j8 -l8
+[0.215s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.361s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.365s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.370s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.526s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.787s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.959s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.164s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.184s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.206s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.206s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.206s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.217s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.274s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.275s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_introspection_cpp>;/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c;/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_py
+[1.275s] -- Configured cppcheck exclude dirs and/or files: 
+[1.280s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.290s] -- Added test 'lint_cmake' to check CMake code style
+[1.294s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.332s] -- Added test 'uncrustify' to check C / C++ code style
+[1.332s] -- Configured uncrustify additional arguments: 
+[1.337s] -- Added test 'xmllint' to check XML markup files
+[1.341s] -- Configuring done
+[1.398s] -- Generating done
+[1.401s] -- Build files have been written to: /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs
+[1.430s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.441s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.456s] [  5%] Built target ament_cmake_python_copy_aburos_msgs
+[1.708s] running egg_info
+[1.737s] writing aburos_msgs.egg-info/PKG-INFO
+[1.738s] writing dependency_links to aburos_msgs.egg-info/dependency_links.txt
+[1.738s] writing top-level names to aburos_msgs.egg-info/top_level.txt
+[1.744s] [  5%] Built target aburos_msgs__cpp
+[1.758s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.758s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.758s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.800s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_generator_c[0m
+[1.819s] [ 15%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_c.dir/rosidl_generator_c/aburos_msgs/msg/detail/abu_rule__functions.c.o[0m
+[1.820s] [ 17%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_c.dir/rosidl_generator_c/aburos_msgs/msg/detail/abu_bytes__functions.c.o[0m
+[1.823s] reading manifest file 'aburos_msgs.egg-info/SOURCES.txt'
+[1.825s] writing manifest file 'aburos_msgs.egg-info/SOURCES.txt'
+[1.857s] [ 17%] Built target ament_cmake_python_build_aburos_msgs_egg
+[2.005s] [ 20%] [32m[1mLinking C shared library libaburos_msgs__rosidl_generator_c.so[0m
+[2.051s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_introspection_cpp[0m
+[2.052s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_cpp[0m
+[2.072s] [ 25%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aburos_msgs/msg/abu_rule__type_support.cpp.o[0m
+[2.072s] [ 25%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aburos_msgs/msg/abu_bytes__type_support.cpp.o[0m
+[2.073s] [ 28%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aburos_msgs/msg/detail/abu_bytes__type_support.cpp.o[0m
+[2.074s] [ 30%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aburos_msgs/msg/detail/abu_rule__type_support.cpp.o[0m
+[2.098s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[2.117s] [ 33%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aburos_msgs/msg/detail/dds_fastrtps/abu_rule__type_support.cpp.o[0m
+[2.120s] [ 35%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aburos_msgs/msg/detail/dds_fastrtps/abu_bytes__type_support.cpp.o[0m
+[2.214s] [ 35%] Built target aburos_msgs__rosidl_generator_c
+[2.229s] [ 38%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.243s] [ 41%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.259s] [ 43%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.570s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_c[0m
+[2.585s] [ 48%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aburos_msgs/msg/abu_bytes__type_support.cpp.o[0m
+[2.586s] [ 48%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aburos_msgs/msg/abu_rule__type_support.cpp.o[0m
+[2.621s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_fastrtps_c[0m
+[2.621s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_introspection_c[0m
+[2.639s] [ 51%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aburos_msgs/msg/detail/abu_rule__type_support.c.o[0m
+[2.641s] [ 53%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aburos_msgs/msg/detail/abu_bytes__type_support.c.o[0m
+[2.649s] [ 56%] [32m[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_cpp.so[0m
+[2.650s] [ 58%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aburos_msgs/msg/detail/abu_bytes__type_support_c.cpp.o[0m
+[2.651s] [ 61%] [32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aburos_msgs/msg/detail/abu_rule__type_support_c.cpp.o[0m
+[2.662s] [ 64%] [32m[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_c.so[0m
+[2.778s] [ 66%] [32m[1mLinking C shared library libaburos_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.897s] [ 66%] Built target aburos_msgs__rosidl_typesupport_cpp
+[2.953s] [ 66%] Built target aburos_msgs__rosidl_typesupport_c
+[2.957s] [ 66%] Built target aburos_msgs__rosidl_typesupport_introspection_c
+[2.964s] [ 69%] [32m[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.990s] [ 71%] [32m[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.128s] [ 71%] Built target aburos_msgs__rosidl_typesupport_introspection_cpp
+[3.148s] [ 71%] Built target aburos_msgs__rosidl_typesupport_fastrtps_cpp
+[3.192s] [ 74%] [32m[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.335s] [ 74%] Built target aburos_msgs__rosidl_typesupport_fastrtps_c
+[3.352s] [ 74%] Built target aburos_msgs
+[3.370s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.697s] [ 76%] Built target aburos_msgs__py
+[3.707s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_generator_py[0m
+[3.731s] [ 82%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_py.dir/rosidl_generator_py/aburos_msgs/msg/_abu_bytes_s.c.o[0m
+[3.731s] [ 82%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_py.dir/rosidl_generator_py/aburos_msgs/msg/_abu_rule_s.c.o[0m
+[3.900s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/aburos_msgs/libaburos_msgs__rosidl_generator_py.so[0m
+[4.069s] [ 84%] Built target aburos_msgs__rosidl_generator_py
+[4.079s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_c__pyext[0m
+[4.082s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[4.082s] [35m[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.091s] [ 87%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.095s] [ 89%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.097s] [ 92%] [32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.257s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.286s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.291s] [100%] [32m[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.400s] [100%] Built target aburos_msgs__rosidl_typesupport_c__pyext
+[4.403s] [100%] Built target aburos_msgs__rosidl_typesupport_introspection_c__pyext
+[4.404s] [100%] Built target aburos_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.415s] Invoked command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs -- -j8 -l8
+[4.498s] Invoking command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs
+[4.505s] -- Install configuration: ""
+[4.505s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/rosidl_interfaces/aburos_msgs
+[4.505s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.506s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.506s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_ros.h
+[4.506s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_bytes.h
+[4.506s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.506s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_rule.h
+[4.506s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.506s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__struct.h
+[4.507s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__functions.h
+[4.507s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.h
+[4.507s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__functions.c
+[4.507s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__functions.h
+[4.507s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__struct.h
+[4.507s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__functions.h
+[4.508s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.h
+[4.508s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__struct.h
+[4.508s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.h
+[4.508s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__functions.c
+[4.508s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__functions.c
+[4.508s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/library_path.sh
+[4.508s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/library_path.dsv
+[4.509s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_c.so
+[4.510s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_c.so" to ""
+[4.510s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.510s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.510s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.510s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.510s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_fastrtps_c.h
+[4.510s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_fastrtps_c.h
+[4.511s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_fastrtps_c.h
+[4.511s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_c.so
+[4.512s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[4.512s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.512s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.512s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.512s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.513s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.c
+[4.513s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.c
+[4.513s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.c
+[4.513s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_introspection_c.h
+[4.513s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_introspection_c.h
+[4.513s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_introspection_c.h
+[4.513s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_c.so
+[4.514s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_c.so" to ""
+[4.515s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_c.so
+[4.515s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_c.so" to ""
+[4.515s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.515s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.515s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_rule.hpp
+[4.516s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_bytes.hpp
+[4.517s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_ros.hpp
+[4.517s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.517s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__builder.hpp
+[4.517s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__builder.hpp
+[4.517s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__struct.hpp
+[4.517s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__traits.hpp
+[4.518s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__struct.hpp
+[4.518s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__traits.hpp
+[4.518s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__struct.hpp
+[4.518s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__builder.hpp
+[4.519s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__traits.hpp
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.519s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_fastrtps_cpp.hpp
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/dds_fastrtps
+[4.519s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_fastrtps_cpp.hpp
+[4.519s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_fastrtps_cpp.hpp
+[4.520s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.521s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.521s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs
+[4.521s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg
+[4.521s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail
+[4.522s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_introspection_cpp.hpp
+[4.522s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_introspection_cpp.hpp
+[4.522s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.cpp
+[4.522s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_introspection_cpp.hpp
+[4.522s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.cpp
+[4.522s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.cpp
+[4.523s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_cpp.so
+[4.524s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[4.525s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_cpp.so
+[4.525s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_cpp.so" to ""
+[4.525s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/pythonpath.sh
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/pythonpath.dsv
+[4.526s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[4.526s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_c.c
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.526s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.527s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.527s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/libaburos_msgs__rosidl_generator_py.so
+[4.527s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg
+[4.527s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes.py
+[4.527s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_ros.py
+[4.527s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule_s.c
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes_s.c
+[4.528s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_ros_s.c
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/__init__.py
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule.py
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.528s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/__init__.py
+[4.561s] Listing '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs'...
+[4.561s] Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/__init__.py'...
+[4.561s] Listing '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg'...
+[4.561s] Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/__init__.py'...
+[4.561s] Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes.py'...
+[4.561s] Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule.py'...
+[4.565s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.565s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.565s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.566s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.566s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.566s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.567s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_py.so
+[4.568s] -- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_py.so" to ""
+[4.568s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuRule.idl
+[4.568s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuBytes.idl
+[4.568s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuRule.msg
+[4.568s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuBytes.msg
+[4.569s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/package_run_dependencies/aburos_msgs
+[4.569s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/parent_prefix_path/aburos_msgs
+[4.569s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/ament_prefix_path.sh
+[4.569s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/ament_prefix_path.dsv
+[4.569s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/path.sh
+[4.569s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/path.dsv
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.bash
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.sh
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.zsh
+[4.570s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.dsv
+[4.570s] -- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.dsv
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/packages/aburos_msgs
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cExport.cmake
+[4.570s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.571s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[4.571s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.571s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.571s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.571s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cExport.cmake
+[4.572s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.572s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cppExport.cmake
+[4.572s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.572s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.573s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.573s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.573s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cppExport.cmake
+[4.573s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.573s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_pyExport.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_pyExport-noconfig.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.574s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.575s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgsConfig.cmake
+[4.575s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgsConfig-version.cmake
+[4.575s] -- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.xml
+[4.576s] Invoked command in '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs

@@ -1,0 +1,10 @@
+setup.py
+aburos_msgs/__init__.py
+aburos_msgs.egg-info/PKG-INFO
+aburos_msgs.egg-info/SOURCES.txt
+aburos_msgs.egg-info/dependency_links.txt
+aburos_msgs.egg-info/top_level.txt
+aburos_msgs/msg/__init__.py
+aburos_msgs/msg/_abu_bytes.py
+aburos_msgs/msg/_abu_ros.py
+aburos_msgs/msg/_abu_rule.py

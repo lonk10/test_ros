@@ -1,0 +1,315 @@
+[0.000000] (-) TimerEvent: {}
+[0.000462] (aburos_msgs) JobQueued: {'identifier': 'aburos_msgs', 'dependencies': OrderedDict()}
+[0.001025] (aburos_msgs) JobStarted: {'identifier': 'aburos_msgs'}
+[0.007474] (aburos_msgs) JobProgress: {'identifier': 'aburos_msgs', 'progress': 'cmake'}
+[0.008123] (aburos_msgs) JobProgress: {'identifier': 'aburos_msgs', 'progress': 'build'}
+[0.009099] (aburos_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs', '--', '-j8', '-l8'], 'cwd': '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lonk'), ('SSH_AGENT_PID', '218'), ('GIT_ASKPASS', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.5/lib64:/usr/local/cuda-12.5/lib64:'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/lonk'), ('OLDPWD', '/home/lonk/abu-new/test/test_abu'), ('TERM_PROGRAM_VERSION', '1.86.1'), ('VSCODE_IPC_HOOK_CLI', '/mnt/wslg/runtime-dir/vscode-ipc-31c66490-31c2-41da-9f8c-e7c39dc1c1e2.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/node'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lonk'), ('NAME', 'DESKTOP-QC52HG2'), ('WSL_INTEROP', '/run/WSL/16_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.5/bin:/usr/local/go/bin:/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/bin/remote-cli:/usr/lib/ccache:/home/lonk/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/lonk/.local/bin:/usr/local/cuda-12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/gs/gs10.00.0/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/Lonk/Desktop/Stuff/!UNIUD/Tirocinio FBK/NuRV/NuRV-2.0.0-windowsx64:/mnt/c/Users/Lonk/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.1/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/gs/gs10.00.0/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/Lonk/Desktop/Stuff/!UNIUD/Tirocinio FBK/NuRV/NuRV-2.0.0-windowsx64:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.0/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA:/snap/bin:/home/lonk/.cache/rebar3/bin:/home/lonk/.local/bin:/home/lonk/.local/share/coursier/bin:/home/lonk/.cache/rebar3/bin:/home/lonk/.local/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', '172.25.64.1:0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/mnt/wslg/runtime-dir/vscode-git-1aa526a0c7.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXytGzVA/agent.217'), ('AMENT_PREFIX_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs:/opt/ros/humble')]), 'shell': False}
+[0.031598] (aburos_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099637] (-) TimerEvent: {}
+[0.146627] (aburos_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.148095] (aburos_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.153073] (aburos_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.199801] (-) TimerEvent: {}
+[0.262913] (aburos_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299902] (-) TimerEvent: {}
+[0.400175] (-) TimerEvent: {}
+[0.497980] (aburos_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.500282] (-) TimerEvent: {}
+[0.600569] (-) TimerEvent: {}
+[0.657673] (aburos_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700679] (-) TimerEvent: {}
+[0.801076] (-) TimerEvent: {}
+[0.862820] (aburos_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.884194] (aburos_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.901082] (-) TimerEvent: {}
+[0.905184] (aburos_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.905344] (aburos_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.905409] (aburos_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.915982] (aburos_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.966962] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.967604] (aburos_msgs) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_fastrtps_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_cpp>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_fastrtps_cpp>;$<BUILD_INTERFACE:/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_typesupport_introspection_cpp>;/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c;/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_py\n'}
+[0.967754] (aburos_msgs) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.971972] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.979965] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.984160] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.001189] (-) TimerEvent: {}
+[1.015149] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.015331] (aburos_msgs) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.019854] (aburos_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.023796] (aburos_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.067387] (aburos_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.070968] (aburos_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs\n'}
+[1.097365] (aburos_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.101306] (-) TimerEvent: {}
+[1.109731] (aburos_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.118827] (aburos_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_aburos_msgs\n'}
+[1.201425] (-) TimerEvent: {}
+[1.301746] (-) TimerEvent: {}
+[1.342758] (aburos_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.358779] (aburos_msgs) StdoutLine: {'line': b'writing aburos_msgs.egg-info/PKG-INFO\n'}
+[1.359224] (aburos_msgs) StdoutLine: {'line': b'writing dependency_links to aburos_msgs.egg-info/dependency_links.txt\n'}
+[1.359580] (aburos_msgs) StdoutLine: {'line': b'writing top-level names to aburos_msgs.egg-info/top_level.txt\n'}
+[1.401852] (-) TimerEvent: {}
+[1.409588] (aburos_msgs) StdoutLine: {'line': b'[  5%] Built target aburos_msgs__cpp\n'}
+[1.421614] (aburos_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.423189] (aburos_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.425434] (aburos_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.436996] (aburos_msgs) StdoutLine: {'line': b"reading manifest file 'aburos_msgs.egg-info/SOURCES.txt'\n"}
+[1.439496] (aburos_msgs) StdoutLine: {'line': b"writing manifest file 'aburos_msgs.egg-info/SOURCES.txt'\n"}
+[1.470549] (aburos_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_c.dir/rosidl_generator_c/aburos_msgs/msg/detail/abu_bytes__functions.c.o\x1b[0m\n'}
+[1.470720] (aburos_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_c.dir/rosidl_generator_c/aburos_msgs/msg/detail/abu_rule__functions.c.o\x1b[0m\n'}
+[1.478921] (aburos_msgs) StdoutLine: {'line': b'[ 17%] Built target ament_cmake_python_build_aburos_msgs_egg\n'}
+[1.501973] (-) TimerEvent: {}
+[1.602377] (-) TimerEvent: {}
+[1.654317] (aburos_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libaburos_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.702562] (-) TimerEvent: {}
+[1.716456] (aburos_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aburos_msgs/msg/abu_bytes__type_support.cpp.o\x1b[0m\n'}
+[1.717427] (aburos_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aburos_msgs/msg/abu_rule__type_support.cpp.o\x1b[0m\n'}
+[1.735598] (aburos_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aburos_msgs/msg/detail/abu_bytes__type_support.cpp.o\x1b[0m\n'}
+[1.735861] (aburos_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aburos_msgs/msg/detail/abu_rule__type_support.cpp.o\x1b[0m\n'}
+[1.756571] (aburos_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aburos_msgs/msg/detail/dds_fastrtps/abu_bytes__type_support.cpp.o\x1b[0m\n'}
+[1.756808] (aburos_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aburos_msgs/msg/detail/dds_fastrtps/abu_rule__type_support.cpp.o\x1b[0m\n'}
+[1.802688] (-) TimerEvent: {}
+[1.845906] (aburos_msgs) StdoutLine: {'line': b'[ 35%] Built target aburos_msgs__rosidl_generator_c\n'}
+[1.859613] (aburos_msgs) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.860578] (aburos_msgs) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.902821] (-) TimerEvent: {}
+[2.003134] (-) TimerEvent: {}
+[2.103445] (-) TimerEvent: {}
+[2.203879] (-) TimerEvent: {}
+[2.304588] (-) TimerEvent: {}
+[2.345243] (aburos_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aburos_msgs/msg/detail/abu_rule__type_support_c.cpp.o\x1b[0m\n'}
+[2.353330] (aburos_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aburos_msgs/msg/detail/abu_rule__type_support.c.o\x1b[0m\n'}
+[2.388363] (aburos_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aburos_msgs/msg/detail/abu_bytes__type_support.c.o\x1b[0m\n'}
+[2.388604] (aburos_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.404715] (-) TimerEvent: {}
+[2.438680] (aburos_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aburos_msgs/msg/detail/abu_bytes__type_support_c.cpp.o\x1b[0m\n'}
+[2.494537] (aburos_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking C shared library libaburos_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.504993] (-) TimerEvent: {}
+[2.559431] (aburos_msgs) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.592883] (aburos_msgs) StdoutLine: {'line': b'[ 58%] Built target aburos_msgs__rosidl_typesupport_cpp\n'}
+[2.605139] (-) TimerEvent: {}
+[2.611060] (aburos_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.635468] (aburos_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.678915] (aburos_msgs) StdoutLine: {'line': b'[ 64%] Built target aburos_msgs__rosidl_typesupport_introspection_c\n'}
+[2.705263] (-) TimerEvent: {}
+[2.805665] (-) TimerEvent: {}
+[2.821027] (aburos_msgs) StdoutLine: {'line': b'[ 64%] Built target aburos_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.840606] (aburos_msgs) StdoutLine: {'line': b'[ 64%] Built target aburos_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.869320] (aburos_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aburos_msgs/msg/abu_rule__type_support.cpp.o\x1b[0m\n'}
+[2.869511] (aburos_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/aburos_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aburos_msgs/msg/abu_bytes__type_support.cpp.o\x1b[0m\n'}
+[2.905778] (-) TimerEvent: {}
+[2.918855] (aburos_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.003940] (aburos_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libaburos_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.005884] (-) TimerEvent: {}
+[3.060664] (aburos_msgs) StdoutLine: {'line': b'[ 74%] Built target aburos_msgs__rosidl_typesupport_c\n'}
+[3.106024] (-) TimerEvent: {}
+[3.184001] (aburos_msgs) StdoutLine: {'line': b'[ 74%] Built target aburos_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.201880] (aburos_msgs) StdoutLine: {'line': b'[ 74%] Built target aburos_msgs\n'}
+[3.206107] (-) TimerEvent: {}
+[3.220631] (aburos_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.306220] (-) TimerEvent: {}
+[3.406569] (-) TimerEvent: {}
+[3.506909] (-) TimerEvent: {}
+[3.562375] (aburos_msgs) StdoutLine: {'line': b'[ 76%] Built target aburos_msgs__py\n'}
+[3.581779] (aburos_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_py.dir/rosidl_generator_py/aburos_msgs/msg/_abu_bytes_s.c.o\x1b[0m\n'}
+[3.582126] (aburos_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_generator_py.dir/rosidl_generator_py/aburos_msgs/msg/_abu_rule_s.c.o\x1b[0m\n'}
+[3.607032] (-) TimerEvent: {}
+[3.707397] (-) TimerEvent: {}
+[3.807753] (-) TimerEvent: {}
+[3.834931] (aburos_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/aburos_msgs/libaburos_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.907907] (-) TimerEvent: {}
+[4.008243] (-) TimerEvent: {}
+[4.020604] (aburos_msgs) StdoutLine: {'line': b'[ 84%] Built target aburos_msgs__rosidl_generator_py\n'}
+[4.031922] (aburos_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.033170] (aburos_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.034165] (aburos_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target aburos_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.045562] (aburos_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.050116] (aburos_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.050439] (aburos_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/aburos_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.108379] (-) TimerEvent: {}
+[4.208750] (-) TimerEvent: {}
+[4.300418] (aburos_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.308791] (aburos_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.308974] (-) TimerEvent: {}
+[4.330814] (aburos_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.409121] (-) TimerEvent: {}
+[4.436514] (aburos_msgs) StdoutLine: {'line': b'[100%] Built target aburos_msgs__rosidl_typesupport_c__pyext\n'}
+[4.450973] (aburos_msgs) StdoutLine: {'line': b'[100%] Built target aburos_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.455679] (aburos_msgs) StdoutLine: {'line': b'[100%] Built target aburos_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.466829] (aburos_msgs) CommandEnded: {'returncode': 0}
+[4.509238] (-) TimerEvent: {}
+[4.550304] (aburos_msgs) JobProgress: {'identifier': 'aburos_msgs', 'progress': 'install'}
+[4.558278] (aburos_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs'], 'cwd': '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lonk'), ('SSH_AGENT_PID', '218'), ('GIT_ASKPASS', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.5/lib64:/usr/local/cuda-12.5/lib64:'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/lonk'), ('OLDPWD', '/home/lonk/abu-new/test/test_abu'), ('TERM_PROGRAM_VERSION', '1.86.1'), ('VSCODE_IPC_HOOK_CLI', '/mnt/wslg/runtime-dir/vscode-ipc-31c66490-31c2-41da-9f8c-e7c39dc1c1e2.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/node'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lonk'), ('NAME', 'DESKTOP-QC52HG2'), ('WSL_INTEROP', '/run/WSL/16_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.5/bin:/usr/local/go/bin:/home/lonk/.vscode-server/bin/31c37ee8f63491495ac49e43b8544550fbae4533/bin/remote-cli:/usr/lib/ccache:/home/lonk/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/lonk/.local/bin:/usr/local/cuda-12.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/gs/gs10.00.0/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/Lonk/Desktop/Stuff/!UNIUD/Tirocinio FBK/NuRV/NuRV-2.0.0-windowsx64:/mnt/c/Users/Lonk/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.1/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/gs/gs10.00.0/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/Lonk/Desktop/Stuff/!UNIUD/Tirocinio FBK/NuRV/NuRV-2.0.0-windowsx64:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.0/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/extras/CUPTI/lib64:/mnt/c/Program Files/NVIDIA:/snap/bin:/home/lonk/.cache/rebar3/bin:/home/lonk/.local/bin:/home/lonk/.local/share/coursier/bin:/home/lonk/.cache/rebar3/bin:/home/lonk/.local/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', '172.25.64.1:0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/mnt/wslg/runtime-dir/vscode-git-1aa526a0c7.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXytGzVA/agent.217'), ('AMENT_PREFIX_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs:/opt/ros/humble')]), 'shell': False}
+[4.566127] (aburos_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.566313] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/rosidl_interfaces/aburos_msgs\n'}
+[4.566627] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.566797] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.566958] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_ros.h\n'}
+[4.567112] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_bytes.h\n'}
+[4.567265] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.567437] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_rule.h\n'}
+[4.567696] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.567897] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__struct.h\n'}
+[4.568059] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__functions.h\n'}
+[4.568285] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.h\n'}
+[4.568352] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__functions.c\n'}
+[4.568429] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__functions.h\n'}
+[4.568487] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__struct.h\n'}
+[4.568540] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__functions.h\n'}
+[4.568592] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.h\n'}
+[4.568673] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__struct.h\n'}
+[4.568741] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.h\n'}
+[4.568794] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__functions.c\n'}
+[4.568878] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__functions.c\n'}
+[4.568953] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/library_path.sh\n'}
+[4.569034] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/library_path.dsv\n'}
+[4.569144] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_c.so\n'}
+[4.569599] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_c.so" to ""\n'}
+[4.569852] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.570062] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.570440] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.570591] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.570720] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_fastrtps_c.h\n'}
+[4.570831] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_fastrtps_c.h\n'}
+[4.570962] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_fastrtps_c.h\n'}
+[4.571578] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.572107] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.572425] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.572670] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.572747] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.572942] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.573011] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.c\n'}
+[4.573075] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.c\n'}
+[4.573129] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.c\n'}
+[4.573219] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_introspection_c.h\n'}
+[4.573277] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_introspection_c.h\n'}
+[4.573329] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_introspection_c.h\n'}
+[4.573630] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.574070] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.574531] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_c.so\n'}
+[4.574984] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.575189] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.575301] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.575368] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_rule.hpp\n'}
+[4.575550] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_bytes.hpp\n'}
+[4.575606] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/abu_ros.hpp\n'}
+[4.575791] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.575904] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__builder.hpp\n'}
+[4.575969] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__builder.hpp\n'}
+[4.576070] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__struct.hpp\n'}
+[4.576256] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__traits.hpp\n'}
+[4.576457] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__struct.hpp\n'}
+[4.576664] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__traits.hpp\n'}
+[4.576732] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__struct.hpp\n'}
+[4.576908] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__builder.hpp\n'}
+[4.577092] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__traits.hpp\n'}
+[4.577330] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.577578] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.577835] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.578145] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.578323] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.578445] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/dds_fastrtps\n'}
+[4.578547] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.578670] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.578855] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.579120] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.579332] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs\n'}
+[4.579441] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg\n'}
+[4.579497] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail\n'}
+[4.579644] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.579793] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.579985] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__type_support.cpp\n'}
+[4.580043] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_bytes__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.580096] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_rule__type_support.cpp\n'}
+[4.580193] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/include/aburos_msgs/aburos_msgs/msg/detail/abu_ros__type_support.cpp\n'}
+[4.580630] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.581130] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.581752] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_cpp.so\n'}
+[4.582181] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.582396] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/pythonpath.sh\n'}
+[4.582553] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/pythonpath.dsv\n'}
+[4.582615] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info\n'}
+[4.582732] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.582836] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.582940] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.583213] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.583278] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs\n'}
+[4.583331] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.583487] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.583631] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.583746] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.584044] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/libaburos_msgs__rosidl_generator_py.so\n'}
+[4.584254] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg\n'}
+[4.584634] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes.py\n'}
+[4.584788] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_ros.py\n'}
+[4.585069] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule_s.c\n'}
+[4.585281] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes_s.c\n'}
+[4.585527] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_ros_s.c\n'}
+[4.585701] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/__init__.py\n'}
+[4.585897] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule.py\n'}
+[4.586118] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/_aburos_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.586191] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.586246] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/__init__.py\n'}
+[4.609348] (-) TimerEvent: {}
+[4.622034] (aburos_msgs) StdoutLine: {'line': b"Listing '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs'...\n"}
+[4.622193] (aburos_msgs) StdoutLine: {'line': b"Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/__init__.py'...\n"}
+[4.622260] (aburos_msgs) StdoutLine: {'line': b"Listing '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg'...\n"}
+[4.622317] (aburos_msgs) StdoutLine: {'line': b"Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/__init__.py'...\n"}
+[4.622371] (aburos_msgs) StdoutLine: {'line': b"Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_bytes.py'...\n"}
+[4.622449] (aburos_msgs) StdoutLine: {'line': b"Compiling '/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/msg/_abu_rule.py'...\n"}
+[4.625948] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.626681] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.626956] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.627512] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.627825] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.628240] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/local/lib/python3.10/dist-packages/aburos_msgs/aburos_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.628985] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_py.so\n'}
+[4.629518] (aburos_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/lib/libaburos_msgs__rosidl_generator_py.so" to ""\n'}
+[4.629776] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuRule.idl\n'}
+[4.629855] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuBytes.idl\n'}
+[4.630035] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuRule.msg\n'}
+[4.630096] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/msg/AbuBytes.msg\n'}
+[4.630238] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/package_run_dependencies/aburos_msgs\n'}
+[4.630298] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/parent_prefix_path/aburos_msgs\n'}
+[4.630461] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/ament_prefix_path.sh\n'}
+[4.630527] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/ament_prefix_path.dsv\n'}
+[4.630641] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/path.sh\n'}
+[4.630850] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/environment/path.dsv\n'}
+[4.631072] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.bash\n'}
+[4.631255] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.sh\n'}
+[4.631311] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.zsh\n'}
+[4.631495] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/local_setup.dsv\n'}
+[4.631607] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.dsv\n'}
+[4.631672] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/ament_index/resource_index/packages/aburos_msgs\n'}
+[4.631945] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cExport.cmake\n'}
+[4.632071] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.632296] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.632472] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.632782] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.633005] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.633705] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.633834] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.634124] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.634443] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.634581] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.634826] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.634986] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.635167] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.635300] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.635549] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.635752] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/export_aburos_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.635886] (aburos_msgs) StdoutLine: {'line': b'-- Installing: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.636098] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.636233] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.636436] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.636501] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.636561] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.636614] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.636665] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgsConfig.cmake\n'}
+[4.636717] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/cmake/aburos_msgsConfig-version.cmake\n'}
+[4.636768] (aburos_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/lonk/abu-new/test/test_abu/aburos_msgs/install/aburos_msgs/share/aburos_msgs/package.xml\n'}
+[4.638189] (aburos_msgs) CommandEnded: {'returncode': 0}
+[4.709532] (-) TimerEvent: {}
+[4.745225] (aburos_msgs) JobEnded: {'identifier': 'aburos_msgs', 'rc': 0}
+[4.746408] (-) EventReactorShutdown: {}
