@@ -1,0 +1,7 @@
+# run inside ardupilot ardusub folder
+sim_vehicle.py --map --console -L RATBeach
+# launches mavros with namespace /mavros/devname
+# /mavros/ IS needed for sensor data
+ros2 launch mavros apm.launch fcu_url:=udp://14551@ namespace:=/mavros/devname
+# set up ros
+source /opt/ros/humble/setup.bash
