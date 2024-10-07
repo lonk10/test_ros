@@ -238,7 +238,7 @@ func (s *CopterVehicle) missionCallback() geographic_msgs_msg.GeoPoseStampedSubs
 				Position: geographic_msgs_msg.GeoPoint{
 					Latitude:  msg.Pose.Position.Latitude,
 					Longitude: msg.Pose.Position.Longitude,
-					Altitude:  s.LocalAgent.Position.Pose.Position.Altitude,
+					Altitude:  s.LocalAgent.Position.Pose.Position.Altitude + 37,
 				},
 			},
 		}
