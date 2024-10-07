@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 
+	geographic_msgs_msg "test/msgs/geographic_msgs/msg"
 	geo_msg "test/msgs/geometry_msgs/msg"
 	mav_srv "test/msgs/mavros_msgs/srv"
 
@@ -13,9 +14,10 @@ import (
 )
 
 type CopterVehicle struct {
+	ID             string
 	Name           string
 	Domain         string
-	Agent          *vbase.VehicleBase
+	LocalAgent     *vbase.VehicleBase
 	LocalNode      *rclgo.Node
 	context        context.Context
 	cancelContext  context.CancelFunc
@@ -27,7 +29,8 @@ type CopterVehicle struct {
 
 func NewCopterVehicle(lname string, gname string) (*CopterVehicle, error) {
 	res := &CopterVehicle{
-		Name:           "/mavros" + lname,
+		ID:             lname,
+		Name:           "/mavros/" + lname,
 		Domain:         gname,
 		ServiceClients: make(map[string]*rclgo.Client),
 	}
@@ -37,7 +40,7 @@ func NewCopterVehicle(lname string, gname string) (*CopterVehicle, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to create agent: %v", err)
 	}
-	res.Agent = vb
+	res.LocalAgent = vb
 
 	if err := rclgo.Init(nil); err != nil {
 		return nil, fmt.Errorf("failed to initialize rclgo: %v", err)
@@ -65,12 +68,12 @@ func (s *CopterVehicle) Init() error {
 		return fmt.Errorf("failed to create node: %v", err)
 	}
 
-	s.GlobalNode, err = serviceCtx.NewNode(s.Name, s.Domain)
+	s.GlobalNode, err = serviceCtx.NewNode(s.ID, s.Domain)
 	if err != nil {
 		return fmt.Errorf("failed to create node: %v", err)
 	}
 
-	s.Agent.Start(s.Name)
+	s.LocalAgent.Start(s.Name)
 
 	//arming service client
 	client, err := mav_srv.NewCommandBoolClient(s.LocalNode, "cmd/arming", &rclgo.ClientOptions{Qos: qosProfile})
@@ -99,7 +102,7 @@ func (s *CopterVehicle) Init() error {
 		return fmt.Errorf("failed to create publisher: %v", err)
 	}
 
-	s.Agent.Pubs["setpoint_velocity/cmd_vel"] = pubSV.Publisher
+	s.LocalAgent.Pubs["setpoint_velocity/cmd_vel"] = pubSV.Publisher
 
 	//publisher for setpos
 	pubSP, err := geo_msg.NewPoseStampedPublisher(s.LocalNode, "setpoint_position/local", nil)
@@ -107,8 +110,28 @@ func (s *CopterVehicle) Init() error {
 		return fmt.Errorf("failed to create publisher: %v", err)
 	}
 
-	s.Agent.Pubs["setpoint_position/local"] = pubSP.Publisher
+	s.LocalAgent.Pubs["setpoint_position/local"] = pubSP.Publisher
 
+	pubGP, err := geographic_msgs_msg.NewGeoPoseStampedPublisher(s.LocalNode, "setpoint_position/global", nil)
+	if err != nil {
+		return fmt.Errorf("failed to create publisher: %v", err)
+	}
+
+	s.LocalAgent.Pubs["setpoint_position/global"] = pubGP.Publisher
+
+	wsCtx, _ := rclgo.NewContext(0, nil)
+	s.Subs, err = wsCtx.NewWaitSet()
+	if err != nil {
+		return fmt.Errorf("failed to create waitset: %v", err)
+	}
+
+	sub, err := geographic_msgs_msg.NewGeoPoseStampedSubscription(s.LocalAgent.GetNode(), s.Domain+"/mission", nil, s.missionCallback())
+	if err != nil {
+		return fmt.Errorf("failed to create subscription: %v", err)
+	}
+	s.LocalAgent.AddSubscriber(sub.Subscription)
+
+	//go s.Subs.Run(context.Background())
 	//time.Sleep(2 * time.Second)
 	go serviceCtx.Spin(s.context)
 	//
@@ -119,7 +142,7 @@ func (s *CopterVehicle) Init() error {
 // !! won't stop until velocity is set to 0 on all axis
 func (s *CopterVehicle) SetVelocity(x float64, y float64, z float64) error {
 	topic := "setpoint_velocity/cmd_vel"
-	pub := s.Agent.Pubs[topic]
+	pub := s.LocalAgent.Pubs[topic]
 	if pub == nil {
 		return fmt.Errorf("publisher %s not found", topic)
 	}
@@ -136,7 +159,7 @@ func (s *CopterVehicle) SetVelocity(x float64, y float64, z float64) error {
 // sends command to move certain meters on x,y,z from current point
 func (s *CopterVehicle) SetPoint(x float64, y float64, z float64) error {
 	topic := "setpoint_position/local"
-	pub := s.Agent.Pubs[topic]
+	pub := s.LocalAgent.Pubs[topic]
 	if pub == nil {
 		return fmt.Errorf("publisher %s not found", topic)
 	}
@@ -196,9 +219,35 @@ func (s *CopterVehicle) TakeOff(altitude float32) error {
 	if client == nil {
 		return fmt.Errorf("could not find client for service %s", topic)
 	}
+	fmt.Println("Taking off...")
 	_, _, err := client.Send(s.context, &msg)
 	if err != nil {
 		return fmt.Errorf("failed to call service: %v", err)
 	}
 	return nil
+}
+
+func (s *CopterVehicle) missionCallback() geographic_msgs_msg.GeoPoseStampedSubscriptionCallback {
+	callback := func(msg *geographic_msgs_msg.GeoPoseStamped, info *rclgo.MessageInfo, err error) {
+		if err != nil {
+			s.LocalAgent.GetNode().Logger().Errorf("failed to receive message: %v", err)
+			return
+		}
+		pos := geographic_msgs_msg.GeoPoseStamped{
+			Pose: geographic_msgs_msg.GeoPose{
+				Position: geographic_msgs_msg.GeoPoint{
+					Latitude:  msg.Pose.Position.Latitude,
+					Longitude: msg.Pose.Position.Longitude,
+					Altitude:  10,
+				},
+			},
+		}
+		fmt.Println("copter got mission, altitude: %s", pos.Pose.Position.Altitude)
+		pub := s.LocalAgent.Pubs["setpoint_position/global"]
+		err = pub.Publish(&pos)
+		if err != nil {
+			s.LocalAgent.GetNode().Logger().Errorf("failed to publish position: %v", err)
+		}
+	}
+	return callback
 }

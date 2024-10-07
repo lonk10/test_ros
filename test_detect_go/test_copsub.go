@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/signal"
+	"syscall"
 	cop "test/test_detect_go/copter"
 	sub "test/test_detect_go/sub"
 	"time"
 )
 
 func testSub() error {
-	subV, err := sub.NewSubVehicle("sub1", "aburos")
+	subV, err := sub.NewSubVehicle("sub1", "/aburos")
 	if err != nil {
 		return fmt.Errorf("could not create sub: %v", err)
 	}
@@ -27,14 +29,14 @@ func testSub() error {
 	time.Sleep(1 * time.Second)
 	fmt.Println("Setting position...")
 	subV.SetPoint(-5.0, 0, -4.0)
-	time.Sleep(10 * time.Second)
+	time.Sleep(1 * time.Second)
 	fmt.Printf("subV.LocalAgent.GetPosition(): %v\n", subV.LocalAgent.GetPosition())
 	//submarine works!!
 	return nil
 }
 
 func testCopter() error {
-	copter, err := cop.NewCopterVehicle("/copter1", "")
+	copter, err := cop.NewCopterVehicle("copter", "/aburos")
 	if err != nil {
 		return fmt.Errorf("could not create copter: %v", err)
 	}
@@ -51,17 +53,29 @@ func testCopter() error {
 	copter.SetMode("guided")
 	time.Sleep(1 * time.Second)
 	fmt.Println("Taking off...")
-	copter.TakeOff(10)
+	copter.TakeOff(10.0)
 	time.Sleep(2 * time.Second)
 	//submarine works!!
 	return nil
 }
 
 func main() {
-	if err := testSub(); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-		os.Exit(1)
-	}
+	go testSub()
+	go testCopter()
+	sigChan := make(chan os.Signal, 1)
+
+	// Notify the channel on receiving Interrupt (Ctrl+C) or SIGTERM signals
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+
+	fmt.Println("Running program. Press Ctrl+C to exit...")
+
+	// Block until a signal is received
+	sig := <-sigChan
+	fmt.Println()
+	fmt.Printf("Received signal: %s, exiting...\n", sig)
+
+	// Exit the program
+	os.Exit(0)
 	/*
 		if err := testCopter(); err != nil {
 			fmt.Fprintln(os.Stderr, err)

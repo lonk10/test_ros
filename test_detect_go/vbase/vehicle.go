@@ -30,6 +30,10 @@ func NewVehicleBase() (*VehicleBase, error) {
 	return res, nil
 }
 
+func (v *VehicleBase) GetNode() *rclgo.Node {
+	return v.node
+}
+
 func (v *VehicleBase) Start(name string) error {
 	if v.node != nil {
 		return errors.New("RosAgent is already running")
@@ -78,9 +82,8 @@ func (v *VehicleBase) GetPublisher(topic string) (*rclgo.Publisher, error) {
 	return res, nil
 }
 
-func (v *VehicleBase) AddSubscriber(topic string) (*rclgo.Subscription, error) {
-
-	return nil, fmt.Errorf("Publisher for topic %s not found", topic)
+func (v *VehicleBase) AddSubscriber(sub *rclgo.Subscription) {
+	v.Subs.AddSubscriptions(sub)
 }
 
 func (v *VehicleBase) GetSubscriber(topic string) (*rclgo.Subscription, error) {
@@ -94,8 +97,15 @@ func (v *VehicleBase) GetSubscriber(topic string) (*rclgo.Subscription, error) {
 }
 
 func (v *VehicleBase) addGPSSubscriber() (*rclgo.Subscription, error) {
+	qos := rclgo.QosProfile{
+		Reliability: rclgo.ReliabilityBestEffort,
+		Durability:  rclgo.DurabilityVolatile,
+	}
+	opts := rclgo.SubscriptionOptions{
+		Qos: qos,
+	}
 	sub, err := sensor_msgs_msg.NewNavSatFixSubscription(
-		v.node, v.node.Namespace()+"/global_position/global", nil, //incompatible qos, need to fix
+		v.node, v.node.Namespace()+"/global_position/global", &opts, //incompatible qos, need to fix
 		func(msg *sensor_msgs_msg.NavSatFix, info *rclgo.MessageInfo, err error) {
 			if err != nil {
 				v.node.Logger().Errorf("failed to receive message: %v", err)
@@ -110,9 +120,9 @@ func (v *VehicleBase) addGPSSubscriber() (*rclgo.Subscription, error) {
 					},
 				},
 			}
-			v.node.Logger().Infof("Received: %#v", msg)
+			//v.node.Logger().Infof("Received: %#v", msg)
 			v.Position = pos
-			fmt.Printf("v.Position: %v\n", v.Position)
+			//fmt.Printf("v.Position: %v\n", v.Position)
 		})
 	if err != nil {
 		return nil, fmt.Errorf("failed to create subscription: %v", err)

@@ -4,8 +4,10 @@ import (
 	"context"
 	"fmt"
 
+	geographic_msgs_msg "test/msgs/geographic_msgs/msg"
 	geo_msg "test/msgs/geometry_msgs/msg"
 	mav_srv "test/msgs/mavros_msgs/srv"
+	std_msgs_msg "test/msgs/std_msgs/msg"
 
 	"github.com/tiiuae/rclgo/pkg/rclgo"
 
@@ -107,10 +109,17 @@ func (s *SubVehicle) Init() error {
 
 	s.LocalAgent.Pubs["setpoint_position/local"] = pubSP.Publisher
 
-	pubBl, err := geo_msg.NewPoseStampedPublisher(s.GlobalNode, "mission", nil)
+	pubBl, err := geographic_msgs_msg.NewGeoPoseStampedPublisher(s.GlobalNode, s.Domain+"/mission", nil)
 	if err != nil {
 		return fmt.Errorf("failed to create publisher: %v", err)
 	}
+	s.Pubs["mission"] = pubBl.Publisher
+
+	sub, err := std_msgs_msg.NewBoolSubscription(s.LocalAgent.GetNode(), s.Name+"/mine_sensor", nil, s.mineDetectionCallback())
+	if err != nil {
+		return fmt.Errorf("failed to create subscriber: %v", err)
+	}
+	s.LocalAgent.AddSubscriber(sub.Subscription)
 
 	s.Pubs["mission"] = pubBl.Publisher
 	//time.Sleep(2 * time.Second)
@@ -189,4 +198,20 @@ func (s *SubVehicle) SetMode(cmode string) error {
 		return fmt.Errorf("failed to call service: %v", err)
 	}
 	return nil
+}
+
+func (s *SubVehicle) mineDetectionCallback() std_msgs_msg.BoolSubscriptionCallback {
+	callback := func(msg *std_msgs_msg.Bool, info *rclgo.MessageInfo, err error) {
+		if err != nil {
+			s.LocalAgent.GetNode().Logger().Errorf("failed to receive message: %v", err)
+			return
+		}
+		pos := s.LocalAgent.GetPosition()
+		pub := s.Pubs["mission"]
+		err = pub.Publish(&pos)
+		if err != nil {
+			s.LocalAgent.GetNode().Logger().Errorf("failed to publish position: %v", err)
+		}
+	}
+	return callback
 }
