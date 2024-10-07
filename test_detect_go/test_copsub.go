@@ -53,7 +53,7 @@ func testCopter() error {
 	copter.SetMode("guided")
 	time.Sleep(1 * time.Second)
 	fmt.Println("Taking off...")
-	copter.TakeOff(10.0)
+	copter.TakeOff(100.0)
 	time.Sleep(2 * time.Second)
 	//submarine works!!
 	return nil
