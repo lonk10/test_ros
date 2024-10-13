@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
 	"time"
 
 	"github.com/abu-lang/goabu/memory"
@@ -18,7 +21,7 @@ type Resources struct {
 
 func run() error {
 	mem := memory.MakeResources()
-	mem.Integer["foo"] = 1
+	mem.Integer["foo"] = 3
 	mem.Text["bar"] = "octocat"
 
 	localRule := `rule MyLocalRule on foo bar for "octocat" == bar do foo = foo * 2, bar = "gopher"`
@@ -45,7 +48,7 @@ func run() error {
 	}
 	fmt.Println("Created second executer")
 
-	executer2.Input("foo = 4, baz = 2.72")
+	executer2.Input("foo = 2, baz = 2.72")
 	fmt.Println("Input done")
 
 	executer.Exec()
@@ -76,13 +79,46 @@ func run() error {
 			agent.node.Logger()
 		}*/
 
-	w := <-agent.wirePool
-	fmt.Printf("Rule %s\n%s\n", w.Tasks[0].Condition, w.Tasks[0].Actions[0])
+	//w := <-agent.wirePool
+	//fmt.Printf("Rule %s\n%s\n", w.Tasks[0].Condition, w.Tasks[0].Actions[0])
+
+	fmt.Println("Waiting...")
+	time.Sleep(5 * time.Second)
+	fmt.Println("wait stop")
+	fmt.Println("exec1")
+	executer2.Exec()
+	fmt.Println("exec2")
+	executer2.Exec()
+	fmt.Println("exec3")
+	executer.Exec()
+	fmt.Println("Exec done")
+
+	state, _ = executer.TakeState()
+	fmt.Println("2foo =", state.Integer["foo"])
+	fmt.Println("2bar =", state.Text["bar"])
+	state2, _ = executer2.TakeState()
+	fmt.Println("2foo =", state2.Integer["foo"])
+	fmt.Println("2baz =", state2.Float["baz"])
 
 	return nil
 }
 
 func main() {
-	err := run()
-	fmt.Printf("err: %v\n", err)
+	go run()
+	//fmt.Printf("err: %v\n", err)
+
+	sigChan := make(chan os.Signal, 1)
+
+	// Notify the channel on receiving Interrupt (Ctrl+C) or SIGTERM signals
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+
+	fmt.Println("Running program. Press Ctrl+C to exit...")
+
+	// Block until a signal is received
+	sig := <-sigChan
+	fmt.Println()
+	fmt.Printf("Received signal: %s, exiting...\n", sig)
+
+	// Exit the program
+	os.Exit(0)
 }

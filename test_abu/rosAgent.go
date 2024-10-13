@@ -28,16 +28,18 @@ type RosAgent struct {
 
 func NewRosAgent() (*RosAgent, error) {
 	res := &RosAgent{
-		topics: make(map[string]string),
-		subs:   nil,
-		pubs:   make(map[string]*rclgo.Publisher),
-		node:   nil,
+		topics:   make(map[string]string),
+		subs:     nil,
+		pubs:     make(map[string]*rclgo.Publisher),
+		node:     nil,
+		wirePool: make(chan wireTasks),
+		taskPool: make(chan ecarule.RemoteTask),
 	}
 
 	return res, nil
 }
 
-func (r *RosAgent) Start(name string) error {
+func (r *RosAgent) Start(localname string, remotename string) error {
 	if r.node != nil {
 		return errors.New("RosAgent is already running")
 	}
@@ -48,19 +50,35 @@ func (r *RosAgent) Start(name string) error {
 	}
 	//defer rclgo.Uninit()
 
-	r.node, err = rclgo.NewNode(name+"ros_abu_agent", "")
+	serviceCtx, err := rclgo.NewContext(0, nil)
+	if err != nil {
+		fmt.Println(err)
+		return fmt.Errorf("failed to create context: %v", err)
+	}
+
+	r.node, err = serviceCtx.NewNode(localname+"_ros_agent", remotename)
 	if err != nil {
 		return fmt.Errorf("failed to create node: %v", err)
 	}
 	//defer r.node.Close()
 	r.context, _ = signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	//defer cancel()
-	ws, err := rclgo.NewWaitSet()
+	ws, err := serviceCtx.NewWaitSet()
 	if err != nil {
 		return fmt.Errorf("failed to create waitset: %v", err)
 	}
-	//defer ws.Close()
 	r.subs = ws
+	topic := remotename + "/global"
+	r.generalChannel = remotename
+	err = r.AddGeneralPublisher(topic)
+	if err != nil {
+		return err
+	}
+	r.SetGenChannel(topic)
+	err = r.AddGeneralSubscriber(topic)
+	if err != nil {
+		return err
+	}
 	go r.subs.Run(r.context)
 	return nil
 }
@@ -186,21 +204,20 @@ func (r *RosAgent) PublishByte(data []byte, topic string) error {
 
 func (r *RosAgent) AddGeneralSubscriber(topic string) error {
 	sub, _ := aburos.NewAbuBytesSubscription(r.node, topic, nil, func(msg *aburos.AbuBytes, info *rclgo.MessageInfo, err error) {
-		fmt.Printf("aaaaa\n")
 		if err != nil {
 			r.node.Logger().Errorf("failed to receive message: %v", err)
 			return
 		}
-		r.node.Logger().Infof("Received: %#v", msg)
+		//r.node.Logger().Infof("Received: %#v", msg)
 		//m.Logger().Infof("Received: %#v", msg)
 		task := msg.Data
-		fmt.Println("received data")
+		r.node.Logger().Infof("Received data")
 		wTask, errs := unmarshalWireTasks(task)
 		err = errs
 		r.wirePool <- wTask
 
 	})
 	r.subs.AddSubscriptions(sub.Subscription)
-	go r.subs.Run(r.context)
+	//go r.subs.Run(r.context)
 	return nil
 }

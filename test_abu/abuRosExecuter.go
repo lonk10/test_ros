@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 	"reflect"
 	"strconv"
 	"sync"
@@ -87,7 +88,7 @@ func NewRosExecuter(mem memory.ResourceController, rules []string, agt *RosAgent
 }
 
 func (m *RosExecuter) StartAgent() error {
-	err := m.agent.Start(m.localNamespace)
+	err := m.agent.Start(m.localNamespace, m.remoteNamespace)
 	if err != nil {
 		return fmt.Errorf("couldn't start agent: %v", err)
 	}
@@ -105,10 +106,10 @@ func (m *RosExecuter) AddRules(rules ...string) error {
 	parser := m.lexerParserPool.Get().(ecarule.Parser)
 	defer m.lexerParserPool.Put(parser)
 	parsedRules, _ := parser.Parse(rules...)
-	err := m.createPubSubs()
+	/*err := m.createPubSubs()
 	if err != nil {
 		return err
-	}
+	}*/
 	if len(parsedRules) == 1 {
 		return m.addRuleAux(parsedRules[0])
 	}
@@ -117,11 +118,14 @@ func (m *RosExecuter) AddRules(rules ...string) error {
 
 func (m *RosExecuter) TakeState() (memory.Resources, []Update) {
 	//m.coordinator.requestWrite(false)
+	fmt.Printf("%s lock in take state...\n", m.localNamespace)
 	m.lockMemory.RLock()
 	memCopy := m.memory.Copy().GetResources()
 	m.lockMemory.RUnlock()
 	lock := make(chan bool)
+	fmt.Printf("%s preparing update in take state...\n", m.localNamespace)
 	m.updateReceiver <- preparedUpdates{confirm: lock}
+	fmt.Printf("%s sent update in take state...\n", m.localNamespace)
 	lock <- false // no updates are added
 	poolCopy := make([]Update, 0, len(m.pool))
 	for _, update := range m.pool {
@@ -129,8 +133,10 @@ func (m *RosExecuter) TakeState() (memory.Resources, []Update) {
 		copy(updateCopy, update)
 		poolCopy = append(poolCopy, updateCopy)
 	}
+	fmt.Printf("%s lock something?...\n", m.localNamespace)
 	<-lock
 	//m.coordinator.closeWrite()
+	fmt.Printf("%s take state finish...\n", m.localNamespace)
 	return memCopy, poolCopy
 }
 
@@ -240,9 +246,13 @@ func (m *RosExecuter) Exec() {
 	m.lockPool.Unlock()
 	m.lockMemory.Lock()
 	var modified stringset.Set
+	fmt.Println("app update")
 	modified = m.applyUpdate(update, false)
+	fmt.Println("sig mod")
 	m.signalModified(modified)
+	fmt.Println("discovery")
 	m.discovery(modified)
+	fmt.Println("exec final")
 }
 
 func (m *RosExecuter) Input(actions string) error {
@@ -284,23 +294,29 @@ func (m *RosExecuter) parseActions(actions string) ([]ecarule.Action, error) {
 }
 
 func (m *RosExecuter) discovery(modified stringset.Set) {
-	//fmt.Println("Entered discovery")
+	fmt.Println("Entered discovery")
 	updates, wire := m.triggeredActions(modified)
+	fmt.Println("ff")
 	m.lockMemory.Unlock()
+	fmt.Println("gg")
 	ok := make(chan bool)
+	fmt.Println("hh")
+	log.Printf("About to use channel %v", m.updateReceiver)
 	m.updateReceiver <- preparedUpdates{updates: updates, confirm: ok}
+	fmt.Println("ii")
 	ok <- true
+	fmt.Println("jj")
 	<-ok // ?
-	//fmt.Println("AAA")
+	fmt.Println("AAA")
 	if len(wire.Tasks) > 0 {
 		payload, err := marshalWireTasks(wire)
 		if err != nil {
 		}
 		tentatives := 0
-		//fmt.Println("BB")
+		fmt.Println("BB")
 		for {
 			err = m.agent.ForAll(payload)
-			//fmt.Println("CC")
+			fmt.Println("CC")
 			if err == nil {
 				break
 			}
