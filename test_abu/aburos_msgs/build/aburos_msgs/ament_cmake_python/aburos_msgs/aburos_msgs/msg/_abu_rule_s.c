@@ -121,7 +121,30 @@ bool aburos_msgs__msg__abu_rule__convert_from_py(PyObject * _pymsg, void * _ros_
     if (!field) {
       return false;
     }
-    {
+    if (PyObject_CheckBuffer(field)) {
+      // Optimization for converting arrays of primitives
+      Py_buffer view;
+      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
+      if (rc < 0) {
+        Py_DECREF(field);
+        return false;
+      }
+      Py_ssize_t size = view.len / sizeof(uint8_t);
+      if (!rosidl_runtime_c__octet__Sequence__init(&(ros_message->local_resources), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create octet__Sequence ros_message");
+        PyBuffer_Release(&view);
+        Py_DECREF(field);
+        return false;
+      }
+      uint8_t * dest = ros_message->local_resources.data;
+      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
+      if (rc < 0) {
+        PyBuffer_Release(&view);
+        Py_DECREF(field);
+        return false;
+      }
+      PyBuffer_Release(&view);
+    } else {
       PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'local_resources'");
       if (!seq_field) {
         Py_DECREF(field);
@@ -133,13 +156,13 @@ bool aburos_msgs__msg__abu_rule__convert_from_py(PyObject * _pymsg, void * _ros_
         Py_DECREF(field);
         return false;
       }
-      if (!rosidl_runtime_c__String__Sequence__init(&(ros_message->local_resources), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create String__Sequence ros_message");
+      if (!rosidl_runtime_c__octet__Sequence__init(&(ros_message->local_resources), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create octet__Sequence ros_message");
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
       }
-      rosidl_runtime_c__String * dest = ros_message->local_resources.data;
+      uint8_t * dest = ros_message->local_resources.data;
       for (Py_ssize_t i = 0; i < size; ++i) {
         PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
         if (!item) {
@@ -147,15 +170,9 @@ bool aburos_msgs__msg__abu_rule__convert_from_py(PyObject * _pymsg, void * _ros_
           Py_DECREF(field);
           return false;
         }
-        assert(PyUnicode_Check(item));
-        PyObject * encoded_item = PyUnicode_AsUTF8String(item);
-        if (!encoded_item) {
-          Py_DECREF(seq_field);
-          Py_DECREF(field);
-          return false;
-        }
-        rosidl_runtime_c__String__assign(&dest[i], PyBytes_AS_STRING(encoded_item));
-        Py_DECREF(encoded_item);
+        assert(PyBytes_Check(item));
+        uint8_t tmp = PyBytes_AS_STRING(item)[0];
+        memcpy(&dest[i], &tmp, sizeof(uint8_t));
       }
       Py_DECREF(seq_field);
     }
@@ -274,17 +291,13 @@ PyObject * aburos_msgs__msg__abu_rule__convert_to_py(void * raw_ros_message)
   {  // local_resources
     PyObject * field = NULL;
     size_t size = ros_message->local_resources.size;
-    rosidl_runtime_c__String * src = ros_message->local_resources.data;
+    uint8_t * src = ros_message->local_resources.data;
     field = PyList_New(size);
     if (!field) {
       return NULL;
     }
     for (size_t i = 0; i < size; ++i) {
-      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "replace");
-      if (!decoded_item) {
-        return NULL;
-      }
-      int rc = PyList_SetItem(field, i, decoded_item);
+      int rc = PyList_SetItem(field, i, PyBytes_FromStringAndSize((const char *)&src[i], 1));
       (void)rc;
       assert(rc == 0);
     }

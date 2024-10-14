@@ -35,25 +35,42 @@ struct AbuBytes_
 
   explicit AbuBytes_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->origin = "";
+    }
   }
 
   explicit AbuBytes_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : origin(_alloc)
   {
-    (void)_init;
-    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->origin = "";
+    }
   }
 
   // field types and members
   using _data_type =
     std::vector<unsigned char, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<unsigned char>>;
   _data_type data;
+  using _origin_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _origin_type origin;
 
   // setters for named parameter idiom
   Type & set__data(
     const std::vector<unsigned char, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<unsigned char>> & _arg)
   {
     this->data = _arg;
+    return *this;
+  }
+  Type & set__origin(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->origin = _arg;
     return *this;
   }
 
@@ -100,6 +117,9 @@ struct AbuBytes_
   bool operator==(const AbuBytes_ & other) const
   {
     if (this->data != other.data) {
+      return false;
+    }
+    if (this->origin != other.origin) {
       return false;
     }
     return true;

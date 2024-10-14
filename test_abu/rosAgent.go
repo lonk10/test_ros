@@ -193,7 +193,8 @@ func (r *RosAgent) AddGeneralPublisher(topic string) error {
 func (r *RosAgent) PublishByte(data []byte, topic string) error {
 	pub := r.pubs[topic]
 	msg := aburos.AbuBytes{
-		Data: data,
+		Data:   data,
+		Origin: r.node.Name(),
 	}
 	err := pub.Publish(&msg)
 	if err != nil {
@@ -212,9 +213,13 @@ func (r *RosAgent) AddGeneralSubscriber(topic string) error {
 		//m.Logger().Infof("Received: %#v", msg)
 		task := msg.Data
 		r.node.Logger().Infof("Received data")
-		wTask, errs := unmarshalWireTasks(task)
-		err = errs
-		r.wirePool <- wTask
+		if msg.Origin != r.node.Name() {
+			wTask, errs := unmarshalWireTasks(task)
+			err = errs
+			r.wirePool <- wTask
+		} else {
+			r.node.Logger().Infof("Discarding message from own node.")
+		}
 
 	})
 	r.subs.AddSubscriptions(sub.Subscription)

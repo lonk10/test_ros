@@ -454,6 +454,7 @@ CMakeFiles/aburos_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fas
   rosidl_generator_c/aburos_msgs/msg/detail/abu_rule__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/aburos_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 

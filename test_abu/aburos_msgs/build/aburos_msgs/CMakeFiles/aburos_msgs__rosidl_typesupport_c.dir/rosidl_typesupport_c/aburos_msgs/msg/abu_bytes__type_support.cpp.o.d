@@ -26,6 +26,7 @@ CMakeFiles/aburos_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/aburos_msg
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c/aburos_msgs/msg/detail/abu_bytes__type_support.h \
  /home/lonk/abu-new/test/test_abu/aburos_msgs/build/aburos_msgs/rosidl_generator_c/aburos_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \

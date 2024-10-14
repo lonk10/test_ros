@@ -20,11 +20,14 @@ extern "C"
 // Include directives for member types
 // Member 'data'
 #include "rosidl_runtime_c/primitives_sequence.h"
+// Member 'origin'
+#include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/AbuBytes in the package aburos_msgs.
 typedef struct aburos_msgs__msg__AbuBytes
 {
   rosidl_runtime_c__octet__Sequence data;
+  rosidl_runtime_c__String origin;
 } aburos_msgs__msg__AbuBytes;
 
 // Struct for a sequence of aburos_msgs__msg__AbuBytes.

@@ -36,6 +36,8 @@ extern "C"
 
 #include "rosidl_runtime_c/primitives_sequence.h"  // data
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // data
+#include "rosidl_runtime_c/string.h"  // origin
+#include "rosidl_runtime_c/string_functions.h"  // origin
 
 // forward declare type support functions
 
@@ -57,6 +59,20 @@ static bool _AbuBytes__cdr_serialize(
     auto array_ptr = ros_message->data.data;
     cdr << static_cast<uint32_t>(size);
     cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: origin
+  {
+    const rosidl_runtime_c__String * str = &ros_message->origin;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -87,6 +103,22 @@ static bool _AbuBytes__cdr_deserialize(
     cdr.deserializeArray(array_ptr, size);
   }
 
+  // Field name: origin
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->origin.data) {
+      rosidl_runtime_c__String__init(&ros_message->origin);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->origin,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'origin'\n");
+      return false;
+    }
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -115,6 +147,10 @@ size_t get_serialized_size_aburos_msgs__msg__AbuBytes(
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name origin
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->origin.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -155,6 +191,18 @@ size_t max_serialized_size_aburos_msgs__msg__AbuBytes(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
+  // member: origin
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -164,7 +212,7 @@ size_t max_serialized_size_aburos_msgs__msg__AbuBytes(
     using DataType = aburos_msgs__msg__AbuBytes;
     is_plain =
       (
-      offsetof(DataType, data) +
+      offsetof(DataType, origin) +
       last_member_size
       ) == ret_val;
   }

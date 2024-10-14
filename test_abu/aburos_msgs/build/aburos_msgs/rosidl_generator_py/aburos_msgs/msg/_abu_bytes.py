@@ -56,14 +56,17 @@ class AbuBytes(metaclass=Metaclass_AbuBytes):
 
     __slots__ = [
         '_data',
+        '_origin',
     ]
 
     _fields_and_field_types = {
         'data': 'sequence<octet>',
+        'origin': 'string',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('octet')),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -71,6 +74,7 @@ class AbuBytes(metaclass=Metaclass_AbuBytes):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.data = kwargs.get('data', [])
+        self.origin = kwargs.get('origin', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -103,6 +107,8 @@ class AbuBytes(metaclass=Metaclass_AbuBytes):
             return False
         if self.data != other.data:
             return False
+        if self.origin != other.origin:
+            return False
         return True
 
     @classmethod
@@ -132,3 +138,16 @@ class AbuBytes(metaclass=Metaclass_AbuBytes):
                  True), \
                 "The 'data' field must be a set or sequence and each value of type 'bytes'"
         self._data = value
+
+    @builtins.property
+    def origin(self):
+        """Message field 'origin'."""
+        return self._origin
+
+    @origin.setter
+    def origin(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'origin' field must be of type 'str'"
+        self._origin = value

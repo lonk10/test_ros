@@ -15,6 +15,8 @@
 // Include directives for member types
 // Member `data`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `origin`
+#include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -90,7 +92,7 @@ bool aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__resize_func
   return rosidl_runtime_c__octet__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__AbuBytes_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__AbuBytes_message_member_array[2] = {
   {
     "data",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_OCTET,  // type
@@ -107,13 +109,30 @@ static rosidl_typesupport_introspection_c__MessageMember aburos_msgs__msg__AbuBy
     aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__fetch_function__AbuBytes__data,  // fetch(index, &value) function pointer
     aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__assign_function__AbuBytes__data,  // assign(index, value) function pointer
     aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__resize_function__AbuBytes__data  // resize(index) function pointer
+  },
+  {
+    "origin",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(aburos_msgs__msg__AbuBytes, origin),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__AbuBytes_message_members = {
   "aburos_msgs__msg",  // message namespace
   "AbuBytes",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(aburos_msgs__msg__AbuBytes),
   aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__AbuBytes_message_member_array,  // message members
   aburos_msgs__msg__AbuBytes__rosidl_typesupport_introspection_c__AbuBytes_init_function,  // function to initialize message memory (memory has to be allocated)

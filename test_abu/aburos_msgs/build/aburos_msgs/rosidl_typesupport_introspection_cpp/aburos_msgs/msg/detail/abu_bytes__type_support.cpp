@@ -82,7 +82,7 @@ void resize_function__AbuBytes__data(void * untyped_member, size_t size)
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember AbuBytes_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember AbuBytes_message_member_array[2] = {
   {
     "data",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_OCTET,  // type
@@ -99,13 +99,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember AbuBytes_mess
     fetch_function__AbuBytes__data,  // fetch(index, &value) function pointer
     assign_function__AbuBytes__data,  // assign(index, value) function pointer
     resize_function__AbuBytes__data  // resize(index) function pointer
+  },
+  {
+    "origin",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(aburos_msgs::msg::AbuBytes, origin),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers AbuBytes_message_members = {
   "aburos_msgs::msg",  // message namespace
   "AbuBytes",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(aburos_msgs::msg::AbuBytes),
   AbuBytes_message_member_array,  // message members
   AbuBytes_init_function,  // function to initialize message memory (memory has to be allocated)

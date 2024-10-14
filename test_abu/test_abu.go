@@ -48,6 +48,7 @@ func run() error {
 	}
 	fmt.Println("Created second executer")
 
+	time.Sleep(2 * time.Second)
 	executer2.Input("foo = 2, baz = 2.72")
 	fmt.Println("Input done")
 

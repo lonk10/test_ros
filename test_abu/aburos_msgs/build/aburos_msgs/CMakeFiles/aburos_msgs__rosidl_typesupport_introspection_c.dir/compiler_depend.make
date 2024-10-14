@@ -132,7 +132,8 @@ CMakeFiles/aburos_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesuppor
   rosidl_generator_c/aburos_msgs/msg/detail/abu_rule__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
 
 
 rosidl_generator_c/aburos_msgs/msg/detail/abu_rule__struct.h:

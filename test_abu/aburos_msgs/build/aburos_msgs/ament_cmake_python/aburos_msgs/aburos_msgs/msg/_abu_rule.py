@@ -64,14 +64,14 @@ class AbuRule(metaclass=Metaclass_AbuRule):
     _fields_and_field_types = {
         'condition': 'string',
         'actions': 'sequence<string>',
-        'local_resources': 'sequence<string>',
+        'local_resources': 'sequence<octet>',
         'remote_resources': 'sequence<string>',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('octet')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.UnboundedString()),  # noqa: E501
     )
 
@@ -182,9 +182,9 @@ class AbuRule(metaclass=Metaclass_AbuRule):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, str) for v in value) and
+                 all(isinstance(v, bytes) for v in value) and
                  True), \
-                "The 'local_resources' field must be a set or sequence and each value of type 'str'"
+                "The 'local_resources' field must be a set or sequence and each value of type 'bytes'"
         self._local_resources = value
 
     @builtins.property

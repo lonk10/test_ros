@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_AbuBytes_origin
+{
+public:
+  explicit Init_AbuBytes_origin(::aburos_msgs::msg::AbuBytes & msg)
+  : msg_(msg)
+  {}
+  ::aburos_msgs::msg::AbuBytes origin(::aburos_msgs::msg::AbuBytes::_origin_type arg)
+  {
+    msg_.origin = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::aburos_msgs::msg::AbuBytes msg_;
+};
+
 class Init_AbuBytes_data
 {
 public:
   Init_AbuBytes_data()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::aburos_msgs::msg::AbuBytes data(::aburos_msgs::msg::AbuBytes::_data_type arg)
+  Init_AbuBytes_origin data(::aburos_msgs::msg::AbuBytes::_data_type arg)
   {
     msg_.data = std::move(arg);
-    return std::move(msg_);
+    return Init_AbuBytes_origin(msg_);
   }
 
 private:

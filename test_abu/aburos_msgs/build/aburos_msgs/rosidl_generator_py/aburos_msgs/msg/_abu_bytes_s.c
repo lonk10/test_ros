@@ -19,6 +19,9 @@
 #include "rosidl_runtime_c/primitives_sequence.h"
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool aburos_msgs__msg__abu_bytes__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -115,6 +118,21 @@ bool aburos_msgs__msg__abu_bytes__convert_from_py(PyObject * _pymsg, void * _ros
     }
     Py_DECREF(field);
   }
+  {  // origin
+    PyObject * field = PyObject_GetAttrString(_pymsg, "origin");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->origin, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -153,6 +171,23 @@ PyObject * aburos_msgs__msg__abu_bytes__convert_to_py(void * raw_ros_message)
     assert(PySequence_Check(field));
     {
       int rc = PyObject_SetAttrString(_pymessage, "data", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // origin
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->origin.data,
+      strlen(ros_message->origin.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "origin", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

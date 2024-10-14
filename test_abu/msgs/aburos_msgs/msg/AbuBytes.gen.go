@@ -25,6 +25,7 @@ func init() {
 
 type AbuBytes struct {
 	Data []byte `yaml:"data"`
+	Origin string `yaml:"origin"`
 }
 
 // NewAbuBytes creates a new AbuBytes with default values.
@@ -40,6 +41,7 @@ func (t *AbuBytes) Clone() *AbuBytes {
 		c.Data = make([]byte, len(t.Data))
 		copy(c.Data, t.Data)
 	}
+	c.Origin = t.Origin
 	return c
 }
 
@@ -49,6 +51,7 @@ func (t *AbuBytes) CloneMsg() types.Message {
 
 func (t *AbuBytes) SetDefaults() {
 	t.Data = nil
+	t.Origin = ""
 }
 
 func (t *AbuBytes) GetTypeSupport() types.MessageTypeSupport {
@@ -133,12 +136,14 @@ func (t _AbuBytesTypeSupport) AsCStruct(dst unsafe.Pointer, msg types.Message) {
 	m := msg.(*AbuBytes)
 	mem := (*C.aburos_msgs__msg__AbuBytes)(dst)
 	primitives.Byte__Sequence_to_C((*primitives.CByte__Sequence)(unsafe.Pointer(&mem.data)), m.Data)
+	primitives.StringAsCStruct(unsafe.Pointer(&mem.origin), m.Origin)
 }
 
 func (t _AbuBytesTypeSupport) AsGoStruct(msg types.Message, ros2_message_buffer unsafe.Pointer) {
 	m := msg.(*AbuBytes)
 	mem := (*C.aburos_msgs__msg__AbuBytes)(ros2_message_buffer)
 	primitives.Byte__Sequence_to_Go(&m.Data, *(*primitives.CByte__Sequence)(unsafe.Pointer(&mem.data)))
+	primitives.StringAsGoStruct(&m.Origin, unsafe.Pointer(&mem.origin))
 }
 
 func (t _AbuBytesTypeSupport) TypeSupport() unsafe.Pointer {

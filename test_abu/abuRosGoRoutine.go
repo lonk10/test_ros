@@ -39,6 +39,8 @@ func (m *RosExecuter) prepareUpdate(wTask wireTasks) {
 	for _, task := range tasks {
 		m.lockMemory.RLock()
 		update, _ := condEvalActions(task.Condition, task.Actions, context, workMem)
+		fmt.Printf("task.Condition: %v\n", task.Condition)
+		fmt.Printf("task.Actions: %v\n", task.Actions)
 		updates = appendNonempty(updates, update)
 		m.lockMemory.RUnlock()
 	}

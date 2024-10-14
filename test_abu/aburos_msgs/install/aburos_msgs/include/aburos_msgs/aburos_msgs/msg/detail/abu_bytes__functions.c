@@ -14,6 +14,8 @@
 // Include directives for member types
 // Member `data`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `origin`
+#include "rosidl_runtime_c/string_functions.h"
 
 bool
 aburos_msgs__msg__AbuBytes__init(aburos_msgs__msg__AbuBytes * msg)
@@ -23,6 +25,11 @@ aburos_msgs__msg__AbuBytes__init(aburos_msgs__msg__AbuBytes * msg)
   }
   // data
   if (!rosidl_runtime_c__octet__Sequence__init(&msg->data, 0)) {
+    aburos_msgs__msg__AbuBytes__fini(msg);
+    return false;
+  }
+  // origin
+  if (!rosidl_runtime_c__String__init(&msg->origin)) {
     aburos_msgs__msg__AbuBytes__fini(msg);
     return false;
   }
@@ -37,6 +44,8 @@ aburos_msgs__msg__AbuBytes__fini(aburos_msgs__msg__AbuBytes * msg)
   }
   // data
   rosidl_runtime_c__octet__Sequence__fini(&msg->data);
+  // origin
+  rosidl_runtime_c__String__fini(&msg->origin);
 }
 
 bool
@@ -48,6 +57,12 @@ aburos_msgs__msg__AbuBytes__are_equal(const aburos_msgs__msg__AbuBytes * lhs, co
   // data
   if (!rosidl_runtime_c__octet__Sequence__are_equal(
       &(lhs->data), &(rhs->data)))
+  {
+    return false;
+  }
+  // origin
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->origin), &(rhs->origin)))
   {
     return false;
   }
@@ -65,6 +80,12 @@ aburos_msgs__msg__AbuBytes__copy(
   // data
   if (!rosidl_runtime_c__octet__Sequence__copy(
       &(input->data), &(output->data)))
+  {
+    return false;
+  }
+  // origin
+  if (!rosidl_runtime_c__String__copy(
+      &(input->origin), &(output->origin)))
   {
     return false;
   }
