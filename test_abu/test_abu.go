@@ -1,4 +1,4 @@
-package main
+package aburos
 
 import (
 	"fmt"
@@ -21,7 +21,7 @@ type Resources struct {
 
 func run() error {
 	mem := memory.MakeResources()
-	mem.Integer["foo"] = 3
+	mem.Integer["foo"] = 1
 	mem.Text["bar"] = "octocat"
 
 	localRule := `rule MyLocalRule on foo bar for "octocat" == bar do foo = foo * 2, bar = "gopher"`
@@ -91,6 +91,8 @@ func run() error {
 	fmt.Println("exec2")
 	executer2.Exec()
 	fmt.Println("exec3")
+	executer.Exec()
+	fmt.Println("exec4")
 	executer.Exec()
 	fmt.Println("Exec done")
 

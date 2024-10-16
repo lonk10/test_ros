@@ -1,4 +1,4 @@
-package main
+package aburos
 
 import (
 	"fmt"
@@ -91,4 +91,7 @@ func (m *RosExecuter) startUpdateReceiver() chan<- preparedUpdates {
 		}
 	}(res)
 	return res
+}
+
+func (m *RosExecuter) cmdRoutine() {
 }

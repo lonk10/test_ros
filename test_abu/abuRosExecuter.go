@@ -1,4 +1,4 @@
-package main
+package aburos
 
 import (
 	"errors"
@@ -21,8 +21,7 @@ type RosExecuter struct {
 
 	workingMemory *ast.WorkingMemory
 
-	agent *RosAgent
-
+	agent           *RosAgent
 	dataContext     ast.IDataContext
 	lexerParserPool sync.Pool
 	types           map[string]string
@@ -230,29 +229,34 @@ func validNames(names []string) error {
 }
 
 func (m *RosExecuter) Exec() {
+	fmt.Printf("%s Exec func start...\n", m.localNamespace)
 	m.lockPool.Lock()
 	if len(m.pool) == 0 {
+		fmt.Printf("%s Exec pool empty...\n", m.localNamespace)
 		m.lockPool.Unlock()
 		return
 	}
+	fmt.Printf("%s Exec getting update...\n", m.localNamespace)
 	update, index := m.chooseUpdate()
 	m.lockPool.Unlock()
 	workingSet := stringset.Make()
+	fmt.Printf("%s Exec getting actions...\n", m.localNamespace)
 	for _, action := range update {
 		workingSet.Insert(action.Resource)
 	}
 	m.lockPool.Lock()
+	fmt.Printf("%s Exec removing update...\n", m.localNamespace)
 	m.removeUpdate(index)
 	m.lockPool.Unlock()
 	m.lockMemory.Lock()
 	var modified stringset.Set
-	fmt.Println("app update")
+	fmt.Printf("%s Exec applying update...\n", m.localNamespace)
 	modified = m.applyUpdate(update, false)
-	fmt.Println("sig mod")
+	fmt.Printf("%s Exec signaling modification...\n", m.localNamespace)
 	m.signalModified(modified)
-	fmt.Println("discovery")
+	fmt.Printf("%s Exec discovery...\n", m.localNamespace)
 	m.discovery(modified)
-	fmt.Println("exec final")
+	fmt.Printf("%s Exec end...\n", m.localNamespace)
 }
 
 func (m *RosExecuter) Input(actions string) error {
@@ -296,27 +300,19 @@ func (m *RosExecuter) parseActions(actions string) ([]ecarule.Action, error) {
 func (m *RosExecuter) discovery(modified stringset.Set) {
 	fmt.Println("Entered discovery")
 	updates, wire := m.triggeredActions(modified)
-	fmt.Println("ff")
 	m.lockMemory.Unlock()
-	fmt.Println("gg")
 	ok := make(chan bool)
-	fmt.Println("hh")
 	log.Printf("About to use channel %v", m.updateReceiver)
 	m.updateReceiver <- preparedUpdates{updates: updates, confirm: ok}
-	fmt.Println("ii")
 	ok <- true
-	fmt.Println("jj")
 	<-ok // ?
-	fmt.Println("AAA")
 	if len(wire.Tasks) > 0 {
 		payload, err := marshalWireTasks(wire)
 		if err != nil {
 		}
 		tentatives := 0
-		fmt.Println("BB")
 		for {
 			err = m.agent.ForAll(payload)
-			fmt.Println("CC")
 			if err == nil {
 				break
 			}
@@ -340,10 +336,12 @@ func (m *RosExecuter) triggeredActions(modified stringset.Set) ([]Update, wireTa
 	rules := m.activeRules(modified)
 	localResources := stringset.Make()
 	for _, rule := range rules {
+		fmt.Printf("%s triggered rule %s\n", m.localNamespace, rule.Name)
 		for _, task := range rule.LocalTasks {
 			tActions, err := condEvalActions(task.Condition, task.Actions, m.dataContext, m.workingMemory)
 			if err != nil {
 			}
+			fmt.Printf("%s appending task %v\n", m.localNamespace, tActions)
 			newpool = appendNonempty(newpool, tActions)
 		}
 		for _, task := range rule.RemoteTasks {
@@ -382,7 +380,7 @@ func (m *RosExecuter) applyUpdate(update Update, input bool) stringset.Set {
 		currentVal, err := variable.Evaluate(m.dataContext, m.workingMemory)
 		if err != nil {
 		}
-		fmt.Printf("%s evaluating %s to %s\n", m.localNamespace, variable.Name, action.Value)
+		fmt.Printf("%s evaluating %v to %v\n", m.localNamespace, currentVal, action.Value)
 		if reflect.DeepEqual(currentVal, action.Value) {
 			continue
 		}

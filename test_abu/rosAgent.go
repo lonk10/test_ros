@@ -1,12 +1,12 @@
-package main
+package aburos
 
 import (
+	aburos "aburos/msgs/aburos_msgs/msg"
 	"context"
 	"errors"
 	"fmt"
 	"os/signal"
 	"syscall"
-	aburos "test/msgs/aburos_msgs/msg"
 
 	"github.com/abu-lang/goabu/ecarule"
 	"github.com/tiiuae/rclgo/pkg/rclgo"

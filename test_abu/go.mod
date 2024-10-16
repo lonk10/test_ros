@@ -1,4 +1,4 @@
-module test
+module aburos
 
 go 1.23.1
 
